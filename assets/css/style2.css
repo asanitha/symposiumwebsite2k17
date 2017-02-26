@@ -621,6 +621,7 @@
 	.container > header {
 	    padding: 20px 30px 10px 5px;
 	    margin:0px;
+	    width: 700px;
 	}
 	p.codrops-demos {
     margin:0px;
