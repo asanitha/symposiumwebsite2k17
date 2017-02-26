@@ -1305,5 +1305,39 @@ div#all {
         height: 150px;
     }
 
+    .coc_container {
+        width: 850px;
+        height: 700px;
+    }
+
+    .coc_background {
+        background: url(../img/coc.png) no-repeat 100%;
+        opacity: 0.7;
+        background-size: cover;
+        width: 850px;
+        height: 500px;
+        left: -100px;
+        top: 00px;
+    }
+
+    .cocpose {
+        top: 90px;
+        left: 350px;
+    }
+
+    .cocbal {
+        left: 0px;
+    }
+    .cocpose img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .cocbal img {
+        width: 850px;
+        height: 500px;
+    }
+
+
 
 }

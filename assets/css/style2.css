@@ -600,3 +600,57 @@
 
 	
 }
+
+
+@media only screen and (max-width: 740px) {
+	
+	.da-slider{
+		width: 100%;
+		min-width: 520px;
+		height: 400px;
+		position: relative;
+		margin: 5px auto;
+	}
+	.da-slide{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+	}
+	.container > header {
+	    padding: 20px 30px 10px 5px;
+	    margin:0px;
+	}
+	p.codrops-demos {
+    margin:0px;
+    padding:0px; 
+	}
+
+
+	.da-slide h2{
+		font-size: 36px;
+		width: 50%;
+		top: 10px;
+		z-index: 10;
+		font-weight: 700;
+	}
+	.da-slide p{
+		width: 50%;
+		top: 65px;
+		font-size: 15px;
+		font-weight: bold!important;
+		line-height: 20px;
+		font-weight: bold;
+	}
+	.da-slide .da-img{
+		text-align: center;
+		top: 0px;
+		left: 110%; 
+	}
+	.da-slide .da-img img{
+		width: 250px;
+		height: 250px;
+	}
+
+}
