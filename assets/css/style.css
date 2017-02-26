@@ -1,0 +1,988 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* particleground demo */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#intro {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+}
+
+#particles-js{       
+  background-color: #000;       
+  background: url(../img/homeBack3.jpg) 50% 50% / cover no-repeat;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* ---- stats.js ---- */ 
+.count-particles{ 
+  background: #000022; position: absolute;
+  top: 48px; left: 0; width: 80px; color: #13E8E9; 
+  font-size: .8em; text-align: left; text-indent: 4px;
+  line-height: 14px; padding-bottom: 2px; 
+  font-family: Helvetica, Arial, sans-serif; font-weight: bold;
+} 
+.js-count-particles{ 
+  font-size: 1.1em; 
+}
+#stats, .count-particles{ 
+  -webkit-user-select: none; margin-top: 5px; margin-left: 5px;
+} 
+#stats{ 
+  border-radius: 3px 3px 0 0; overflow: hidden;  
+} 
+.count-particles{
+ border-radius: 0 0 3px 3px;
+}
+
+
+
+
+
+
+/* 
+Snow starts */
+
+
+
+
+     
+
+#snow{
+  background: none;
+  font-family: Androgyne;
+  background-image: url('../img/s1.png'),
+           url('../img/s2.png'),
+            url('../img/s3.png');
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-animation: snow 10s linear infinite;
+  -moz-animation: snow 10s linear infinite;
+  -ms-animation: snow 10s linear infinite;
+  animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+} 
+
+/* snow ends */
+
+
+
+
+
+
+
+
+
+
+        .cards-row {
+            padding-top: 70px;
+            padding-bottom: 50px;
+            margin-top: 25px;
+        }
+        
+        .thumbnail {
+            padding: 0;
+            border-radius: 0;
+            background: rgba(255, 255, 255, 0.1)!important;
+            border: none;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+        }
+        
+        .thumbnail>img {
+            width: 0%;
+            display: block
+        }
+        
+        .thumbnail h3 {
+            font-size: 26px;
+            color: #336
+        }
+        
+        .thumbnail h3,
+        .card-description,
+        .num {
+            margin: 0;
+            padding: 4px 0;
+            text-align: center
+        }
+        
+        .thumbnail p {
+            padding-top: 8px;
+            font-size: 20px
+        }
+        
+        .thumbnail .btn {
+            border-radius: 0;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+            font-size: 20px
+        }
+        
+        .team-pic {
+            height: 150px !important;
+            width: 150px !important;
+            border-radius: 50%;
+            margin-top: -75px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4), 0 2px 10px 0 rgba(0, 0, 0, .5);
+            transition: all .2s ease-out
+        }
+        
+        .thumbnail:hover .team-pic {
+            height: 200px !important;
+            width: 200px !important;
+            margin-top: -100px
+        }
+        
+        .thumbnail p.social {
+            padding-top: 15px;
+            text-align: center
+        }
+        
+        .social a {
+            color: #FFF;
+            font-size: 18px !important
+        }
+        
+        .social i.fa {
+            height: 36px;
+            width: 36px;
+            text-align: center;
+            line-height: 36px;
+            background: #069;
+            border-radius: 50%
+        }
+        
+        .social i.fa.fa-facebook {
+            background: #43609C
+        }
+        
+        .social i.fa.fa-twitter {
+            background: #2CA8D2
+        }
+        
+        .social i.fa.fa-google-plus {
+            background: #ce4d39
+        }
+
+
+
+
+
+
+
+
+
+
+/* events starts */
+.break {
+    clear: both;
+}
+
+
+/* WRAPPER */
+
+#wrapper {
+    width: 100%;
+    height: 50%;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+
+/* MOVIE POSTERS */
+
+#movieposters {
+    list-style: none;
+}
+
+.tech{
+    display: inline;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: fantasy;
+    float: left;
+    padding-top: 150px;
+    padding-right: 20px;
+    padding-left: 20px; 
+    margin: 20px 10px;
+}
+
+.non_tech{
+    display: inline;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: fantasy;
+    float: left;
+    padding: 80px 10px;  
+}
+
+#movieposters li {
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    -webkit-perspective: 500;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition-property: perspective;
+    -webkit-transition-duration: 0.5s;
+}
+
+#movieposters li:hover {
+    -webkit-perspective: 5000;
+}
+
+#movieposters li img {
+    width: 200px;
+    height: 220px;
+    -webkit-transform: translateZ(30px) rotateY(30deg);
+    -webkit-transition-property: transform, box-shadow, margin;
+    -webkit-transition-duration: 0.5s;
+}
+
+#movieposters li:hover img {
+    -webkit-transform: rotateY(0deg);
+}
+
+.movieinfo {
+    padding: 20px 0px;
+    width: 165px;
+    height: 100px;  
+    background-color: rgba(255,255,255, 0.3);
+    margin: -50px 0 0 50px;
+    position: absolute;
+    -moz-box-shadow: 0 20px 40px #000;
+    -webkit-box-shadow: 0 20px 40px #000;
+    -webkit-transform: translateZ(30px) rotateY(30deg);
+    -webkit-transition-property: transform, box-shadow, margin;
+    -webkit-transition-duration: 0.5s;
+}
+
+#movieposters li:hover .movieinfo {
+    -webkit-transform: rotateY(0deg);
+    -webkit-box-shadow: 0 5px 10px #000;
+    margin: -50px 0 0 20px;
+}
+
+.movieinfo h3 {
+    color: #000;
+    font-variant: small-caps;
+    font-family: Georgia, serif, Times;
+    text-align: center;
+    padding-bottom: 15px;
+    margin: 0px!important;
+}
+
+/* events ends */
+
+
+
+
+
+/* Registration form starts */
+
+      .well{
+        padding: 15px !important;
+      }
+
+        #feedLabel {
+            color: black !important;
+        }
+
+        label {
+            color: white;
+            font-family:'Noto Sans', sans-serif;
+            text-transform: uppercase;
+            text-align: left !important;
+        }
+
+        label.control-label {
+            color: white;
+            font-family:'Noto Sans', sans-serif;
+            text-transform: uppercase;
+            text-align: left !important;
+        }
+
+        input.form-control {
+            background-color: transparent;
+            color: white;
+            font-family:'Noto Sans', sans-serif;
+
+        }
+
+        button.btn.dropdown-toggle.bs-placeholder.btn-default {
+            background-color: transparent;
+            color: white;
+
+        }
+
+        button.btn.dropdown-toggle.btn-default {
+            background-color: transparent;
+            color: white;
+
+        }
+
+        div.btn-group.bootstrap-select.form-control.dropup {
+            background-color: transparent;
+            color: white;
+
+        }
+
+        div.btn-group.bootstrap-select.form-control, div.btn-group.bootstrap-select.form-control.dropdown {
+            background-color: transparent;
+            color: white;
+        }
+        .bs-searchbox input.form-control{
+            color: black;
+        }
+        .no-results {
+            color: black !important;
+        }
+        .btn-success{
+            background-color: #C00422;
+            border: none;
+        }
+        .btn-success:hover{
+            background-color: #F30500;
+        }
+
+
+        /* Registration form ends */
+
+
+
+
+
+                                ul {
+                                  margin: 0;
+                                  padding: 0;
+                                }
+
+                                .naruto_container {
+                                    width: 100%;
+                                    height: 700px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    background: #000;
+                                }
+
+                                .naruto_background {
+                                    background: url(../img/huge_bg.jpg);
+                                    width: 100%;
+                                    height: 700px;
+                                    left: 0;
+                                    top: 0;
+                                }
+
+                                .layer div {
+                                    position: absolute;
+                                }
+
+                                .kurama {
+                                    top: -150px;
+                                    left: -150px;
+                                }
+
+                                .minato {
+                                    top: 330px;
+                                    left: 250px;
+                                }
+
+                                .obito {
+                                    top: 520px;
+                                    left: 550px;
+                                }
+
+                                .landscape {
+                                    top: 500px;
+                                    left: -250px;
+                                }
+
+                                .grass {
+                                    top: 700px;
+                                    left: -250px;
+                                }
+
+                                .leaves {
+                                    top: 350px;
+                                    left: 0px;
+                                }
+
+
+                                
+
+                               .angry_container {
+                                    width: 100%;
+                                    height: 700px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    background: #000;
+                                }
+
+                                .angry_background {
+                                    background: url(../img/angwholeBack.png) no-repeat 100%;
+                                    background-size: cover;
+                                    width: 1500px;
+                                    height: 800px;
+                                    left: -100px;
+                                    top: 0;
+                                }
+
+                                .layer div {
+                                    position: absolute;
+                                }
+
+                                .angryBack {
+                                    top: 200px;
+                                    left: -100px;
+                                }
+
+                                .angryFly {
+                                    top: 370px;
+                                    left: 600px;
+                                }
+
+
+                                .sf_container {
+                                    width: 100%;
+                                    height: 700px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    background: #000;
+                                }
+
+                                .sf_background {
+                                    background: url(../img/a.png) no-repeat 100%;
+                                    opacity: 0.5;
+                                    background-size: cover;
+                                    width: 1500px;
+                                    height: 900px;
+                                    left: -100px;
+                                    top: -200px;
+                                }
+
+                                .layer div {
+                                    position: absolute;
+                                }
+
+                                .sfpose {
+                                    top: 200px;
+                                    left: -200px;
+                                }
+
+                                .sfkick {
+                                    top: 200px;
+                                    left: 220px;
+                                }
+
+
+
+
+
+                                .coc_container {
+                                    width: 100%;
+                                    height: 700px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    background: #000;
+                                }
+
+                                .coc_background {
+                                    background: url(../img/coc.png) no-repeat 100%;
+                                    opacity: 0.7;
+                                    background-size: cover;
+                                    width: 1500px;
+                                    height: 700px;
+                                    left: -100px;
+                                    top: 00px;
+                                }
+
+                                .layer div {
+                                    position: absolute;
+                                }
+
+                                .cocpose {
+                                    top: 120px;
+                                    left: 390px;
+                                }
+
+                                .cocbal {
+                                    opacity: 0.5;
+                                    width: 1550px;
+                                    height :700px;
+                                    left: -300px;
+                                    position: absolute;
+                                }
+
+
+
+
+                                .as_container {
+                                    width: 100%;
+                                    height: 700px;
+                                    overflow: hidden;
+                                    position: relative;
+                                    background: #000;
+                                }
+
+                                .as_background {
+                                    background: url(../img/asback.png) no-repeat 100%;
+                                    background-size: cover;
+                                    width: 1600px;
+                                    height: 700px;
+                                    left: -150px;
+                                    top: 00px;
+                                }
+
+                                .asleftpose {
+                                    top: 120px;
+                                    left:220px;
+                                }
+
+                                .asrightpose {
+                                  top: 120px;
+                                  left: 200px;
+                                }
+
+                                .cen {
+                                    top: 0px;
+                                    left: -100px;
+                                }
+
+
+#hover {
+  color: rgba(188, 175, 204, 0.9);
+}
+
+h2#testimonials {
+  color: rgb(94, 244, 177);
+}
+
+div#all {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* generic css */
+
+.view {
+  background: rgba(10, 10, 10, 0.7)
+    margin-top: 20px;
+    margin-left: 60px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center; 
+  cursor: default;
+}
+
+.view .mask,
+.view .content {
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
+.view img {
+  display: block;
+  position: relative
+}
+
+.view h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-family: Raleway, serif;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 0 0
+}
+
+.view p {
+  font-family: Merriweather, serif;
+  font-style: italic;
+  font-size: 25px;
+  position: relative;
+  color: #fff;
+  padding: 15px 20px 0px;
+  text-align: center
+}
+
+.view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  font-family: Raleway, serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000
+}
+
+.view a.info:hover {
+  box-shadow: 0 0 5px #000
+}
+
+
+/*1*/
+
+.view-first img {
+  /*1*/
+  transition: all 0.2s linear;
+  width: 250px;
+  height: 200px;
+}
+
+.view-first .mask {
+  opacity: 0;
+  background-color: rgba(58, 1, 132, 0.44);
+  transition: all 0.4s ease-in-out;
+}
+
+.view-first h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  font-family: Raleway, serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.view-first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* */
+
+.view-first:hover img {
+  transform: scale(1.1);
+}
+
+.view-first:hover .mask {
+  opacity: 1;
+}
+
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.view-first:hover p {
+  transition-delay: 0.1s;
+}
+
+.view-first:hover a.info {
+  transition-delay: 0.2s;
+}
+
+
+
+.co-ordinators{
+  position: relative;
+  color: #fff;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 50px;
+}
+
+
+.space{
+  width: 100%;
+}
+
+
+.col-md-3 {
+    width: 20%!important;
+}
+
+.thumbnai {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+     .thumbnai img{
+      width: 100%!important;
+     }
+
+     .mar {
+      margin-left: 15px!important;
+     }
+
+       .galery img {
+            background: rgba(255,255,255,0.1);
+            width: 300px;
+            height: 250px!important;
+            border: #fff solid;
+           -webkit-transition:.4s, width 0;
+           transition:.4s, width 0;
+           cursor:pointer;
+       }
+       
+       .galery h2{
+        padding: 10px;
+        text-align: center;
+       }
+       
+       .galery h3{
+        text-align: center;
+       }
+       
+       .galery:hover img { -webkit-filter:grayscale(1) blur(4px) opacity(.5); }
+   
+       .galery:hover img:hover {
+           -webkit-filter:none !important;   
+           z-index:1;
+       }
+
+
+
+
+
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+/* Menu starts */
+
+.nav-menu{
+  font-size:40px;
+  cursor:pointer;
+  text-align: start;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+/* Menu ends */
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 48px;
+  }
+  h1::after {
+    height: 8px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  #intro {
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h1::after {
+    height: 6px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+
+.nav-menu{
+  font-size:25px;
+  cursor:pointer;
+  text-align: start;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  }
+  #particles-js {
+    background: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .naruto_container {
+    display: none;
+  }
+}
+
+
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 28px;
+  }
+  h1::after {
+    height: 4px;
+  }
+}
+
