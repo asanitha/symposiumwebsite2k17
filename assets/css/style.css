@@ -1065,7 +1065,7 @@ div#all {
         background: url(../img/a.png) no-repeat 100%;
         opacity: 0.5;
         background-size: cover;
-        width: 800px!important;
+        width: 850px!important;
         height: 500px!important;
         left: -100px;
         top: -50px;
@@ -1075,8 +1075,8 @@ div#all {
         left: -100px;
     }
     .sfpose img {
-        width: 800px;
-        height: 200px;
+        width: 850px;
+        height: 230px;
     }
     .sfkick {
         top: 200px;
@@ -1092,14 +1092,14 @@ div#all {
         position: absolute;
     }
     .cocbal img{
-        width: 790px;
+        width: 850px;
         height: 400px;
     }
     .nav-menu {
         top: 25%;
     }
     #wrapper {
-        width: 100%;
+        width: 110%;
         height: 27%;
         padding-left: 1%;
         padding-top: 1%;
@@ -1122,7 +1122,7 @@ div#all {
     #movieposters li {
         width: 80px;
         height: 100px;
-        margin-right: 28px;
+        margin-right: 20px;
     }
     #movieposters li img {
         width: 90px;
@@ -1156,7 +1156,7 @@ div#all {
     }
 
     .angry_background {
-        width: 800px;
+        width: 850px;
         height: 450px;
         left: -100px;
         top: 0;
@@ -1167,7 +1167,7 @@ div#all {
         left: -50px;
     }
     .angryBack img {
-        width: 760px;
+        width: 850px;
         height: 210px;
     }
 
@@ -1214,4 +1214,96 @@ div#all {
         padding: 3px;
         font-size: 20px;
     }
+    .form-group {
+        margin-bottom: 5px !important;
+    }
+    label.control-label {
+        display: none;
+    }
+    #eeven{
+        font-size: 20px;
+        margin:5px;
+    }
+    .well {
+        padding: 5px!important;
+        margin-bottom: 5px!important;
+        margin-left: 10px!important;
+    }
+
+
+    .naruto_container {
+        width: 100%;
+        height: 500px;
+    }
+
+    .naruto_background {
+        background: url(../img/huge_bg.jpg);
+        width: 850px;
+        height: 500px;
+        left: 0;
+        top: 0;
+    }
+
+
+    .kurama {
+        top: 0px;
+        left: 100px;
+    }
+
+    .minato {
+        top: 275px;
+        left: 250px;
+    }
+
+    .obito {
+        top: 275px;
+        left: 350px;
+    }
+
+    .landscape {
+        top: 300px;
+        left: -20px;
+    }
+
+    .grass {
+        top: 250px;
+        left: -50px;
+    }
+
+    .leaves {
+        top: 250px;
+        left: 0px;
+    }
+
+    .kurama img{
+        width: 500px;
+        height: 400px;
+    }
+
+    .minato img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .obito img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .landscape img{
+        width: 850px;
+        height: 150px;
+    }
+
+    .grass img{
+        width: 850px;
+        height: 150px;
+    }
+
+    .leaves img{
+        width: 850px;
+        height: 150px;
+    }
+
+
 }
