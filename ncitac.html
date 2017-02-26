@@ -23,6 +23,15 @@
     <script type="text/javascript" src="assets/scripts/modernizr.custom.28468.js"></script>
 
 
+    <style type="text/css">
+        @media only screen and (orientation:portrait) {
+            .body_container {
+                display: none;
+            }
+        }
+        
+    </style>
+
     <style type="text/css" media="screen">
     @font-face {
             font-family: tronfont;
@@ -44,7 +53,7 @@
 
 </head>
 
-<body>
+<body class="body_container">
 
 
             <section class="coc_container">
@@ -115,6 +124,11 @@
 
        
         <script>
+
+        
+if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+}
             // Pretty simple huh?
             var cocscene = document.getElementById('cocscene');
             var parallax = new Parallax(cocscene, {

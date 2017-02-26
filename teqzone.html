@@ -34,6 +34,15 @@
     <script type="text/javascript" src="assets/scripts/modernizr.custom.28468.js"></script>
 
     <style type="text/css">
+        @media only screen and (orientation:portrait) {
+            .body_container {
+                display: none;
+            }
+        }
+        
+    </style>
+
+    <style type="text/css">
         @font-face {
             font-family: csfont;
             src: url("assets/fonts/techno_hideo_bold.eot");
@@ -91,7 +100,7 @@
 
 </head>
 
-<body>
+<body class="body_container">
 
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -492,6 +501,12 @@
         <script type="text/javascript" src="assets/scripts/switchtext.js"></script>
 
         <script type="text/javascript">
+
+
+if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+}
+
             $(document).ready(function() {
                 $('#fullpage').fullpage({
                     lockAnchors: false,

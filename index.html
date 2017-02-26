@@ -9,6 +9,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
+    <style type="text/css">
+        @media only screen and (orientation:portrait) {
+            .body_container {
+                display: none;
+            }
+        }
+        
+    </style>
+
     <style type="text/css" media="screen">
         @font-face {
             font-family: tronfont;
@@ -88,7 +97,7 @@
     </style>
 </head>
 
-<body>
+<body class="body_container">
 
     <h1 class="teqzone"><a href="teqzone.html">TEQZONE 2K17</a></h1>
     <h1 class="ncitac"><a href="ncitac.html">NCITAC 2K17</a></h1>
@@ -151,18 +160,19 @@ l76 -25v-11h-296v11c11.333 0 22.666 0.666992 33.999 2s21.333 7.66602 30 18.999l9
     </svg>
 
     <script type="text/javascript">
-        /************************************* 
-                        Code is based on the walkthough here: http://thecodeplayer.com/walkthrough/matrix-rain-animation-html5-canvas-javascript 
-                        **************************************/
+
+if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+}
+
         var cnvs = document.getElementById('blondebrunetteredhead');
         var cntr = document.getElementById('ctr');
         var cntxt = cnvs.getContext('2d');
 
         var chars = '123456298747983200982479510934702914091273490714992402914792490'; // om
-        chars = chars.split(''); // make array
+        chars = chars.split('');
         var font_size = 14;
 
-        // see: http://blog.codepen.io/2013/07/29/full-screen-canvas/
         function resizeCanvas() {
             cnvs.width = window.innerWidth * 1.5;
             setTimeout(function() {
